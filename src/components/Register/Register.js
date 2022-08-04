@@ -25,7 +25,7 @@ class Register extends React.Component {
 
     onSubmitSignIn = () => {
         //POST
-        fetch('http://localhost:3000/register', {
+        fetch('https://still-thicket-11896.herokuapp.com/register', {
           method: 'post',
           headers: {'Content-Type': 'application/json'},
           //to send it to the backend we cant send a js object we have to make it a string

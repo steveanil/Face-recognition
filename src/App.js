@@ -68,7 +68,7 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input});
-      fetch('http://localhost:3000/imageurl', {
+      fetch('https://still-thicket-11896.herokuapp.com/imageurl', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         //to send it to the backend we cant send a js object we have to make it a string
@@ -79,7 +79,7 @@ class App extends Component {
       .then(response => response.json())
       .then(response => { //clarifai gives a response
         if(response) {
-          fetch('http://localhost:3000/image', {
+          fetch('https://still-thicket-11896.herokuapp.com/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             //to send it to the backend we cant send a js object we have to make it a string
